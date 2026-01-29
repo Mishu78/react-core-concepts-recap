@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Post from "./post"
 export default function Posts(){
     const [posts,setPosts]=useState([])
    useEffect(()=>{
@@ -8,14 +9,19 @@ export default function Posts(){
    },[])
     return(
         <div className="">
-            <h3>Posts: </h3>
+            <h3>Posts:{posts.length} </h3>
+            {
+                posts.map(post=> <Post post={post}></Post>)
+            }
         </div>
+        
     )
 }
 
 
 
 /*create a state to store the data
-  create use effect with no dependencies
+  create use effect with no dependencies empty array
+  use fetch to load data
 */
 

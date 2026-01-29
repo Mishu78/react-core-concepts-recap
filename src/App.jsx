@@ -17,8 +17,6 @@ function App() {
       <li>Load data</li>
     </ol>
     <Posts></Posts>
-      
-
     </>
   )
 }
